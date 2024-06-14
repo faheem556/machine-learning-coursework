@@ -1,0 +1,27 @@
+Today we revised basic machine learning process and discussed several tools and libraries.
+
+Kaggle (https://www.kaggle.com/) is a helpful machine learning and data science community. Really useful for learning and sharing research. Their machine learning courses are hands-on and super easy to follow.
+
+On the high level machine learning is a process of:
+1. Selecting a learning model (such as linear regressors, decision tree regressor or a deep learning model)
+2. Preparing dataset: Identifying and preparing relavent input data (features) 
+3. Training the models: Train and measure error (loss function / mean absolute error)
+4. Validating the model: Split the training data into two dataset (70/30) and test the model on the new data 
+5. Optimizating the model: Avoid overfitting and underfitting
+
+Once the model is ready, it can be used to draw an anlysis or used in production systems. A model server (basically an API server which hosts models - such as tensor flow serving - https://www.tensorflow.org/tfx/guide/serving) is required in the production environments.
+
+There are two broad categories of machine learning algos: supervised and unsupervised
+*  Supervised learning is used when you have the old data and results and you want to use the pattern to make a preduction on new data.
+* Unserperised learning is used when you want to identify patterns in data but you don't have any explicit data
+
+In supervised learning, linear regression is a basic analysis method. The word regression means to minimize or summerize something. Linear regression algo takes the input data and identifies the relationship between features. In it's basic form it's a y = mx + b where we have to find values of m and b. The algorithm that helps identify these with minimal time is called stochastic gradient descent -- https://www.kaggle.com/code/ryanholbrook/stochastic-gradient-descent
+
+In terms of libraries: 
+* pandas is used for data loading and manipulatino
+* numpy is used for linear algabra -- we looked at np.polyfit function
+* matplotlib for graphing
+* sklearn is popular for regression models
+* keras, pytorch, and tensorflow are popular for deep learning (neural networks)
+
+We also discussed the auto-mpg and skin-cancer-mortality rate notebooks.

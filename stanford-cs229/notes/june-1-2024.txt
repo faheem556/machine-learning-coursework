@@ -1,0 +1,27 @@
+Today we discussed LLMs and GenAI. GenAI concerned with text generation and natural language processing. Large language models are stateless neural networks that have learned relationship between words (tokens) using big corpus of text dataset -- for example books and the content on web. Modern LLMs are built on a technology called transformers (See "Attention is all you need" paper from 2017). Self learning LLMs take large amounts of text and create a compressed networks representing the relationship between words in sentences / paragraphs. 
+
+LLMs are basically auto-completing systems. Sometimes (like in ChatGPT) these models are fine tuned to respond (auto-complete) in a Q/A format.
+
+LLM can be extended by adding peripheral functionality of using an external tool such as browser, calculator, python, ... see https://medium.com/@protegeigdtuw/part-1-introduction-to-llm-os-1cfec39689f7
+
+The knowledge of an LLM can be refined and/improved. Two most popular methods of extending LLMs are Fine Tuning and Retrieval Augmented Generation (RAGs). Fine tuning is a process of either adding more data to the LLM or tuning existing data using more refined training data. You can take an open source LLM and train it on your company data and using in your local environment. RAG is alternative way where you prepare your company data and LLM can read and analyze the data in realtime. 
+
+HuggingFace.co is the GitHub of AI and LLMs. It hosts almost all open-source models, training datasets, and libraries. It also providing training courses. Proprietary models only publish their API while open-source models publish binaries and details on how the model was created.
+
+You can run models locally on your machine even without any GPUs. A compression technique called quantization is used to further compress the models so that we can use/run them locally. Some model accuracy is lost in the quantization process. Some info here -- https://cloud.google.com/blog/products/application-development/new-localllm-lets-you-develop-gen-ai-apps-locally-without-gpus
+
+Models on hugging face are often published in safe tensor binary file format along with other model configuration and information. @ggerganov has created a GGUF and GGLM file formats which archive all these binaries and model info into a single file making it even easier to download and run the models from the hugging face portal.
+
+1. https://huggingface.co/docs/hub/en/gguf
+2. https://github.com/ggerganov/llama.cpp/discussions/2948
+
+There are bunch of tools available to run the GGUF files locally:
+
+1. llama.cpp - https://x.com/ggerganov/status/1772268000369873117/photo/1
+2. ollama - https://ollama.com/download
+3. https://github.com/GoogleCloudPlatform/localllm
+4. https://lmstudio.ai/
+5. https://jan.ai/
+6. https://gpt4all.io/index.html 
+
+You can also run the full models locally without these tools - see instructions for llama here https://github.com/meta-llama/llama -- however, you would need GPU and twice the memory of the size of the model; 7B model would require 14GB+1GB(extra) RAM along with a Nvidia GPU.
